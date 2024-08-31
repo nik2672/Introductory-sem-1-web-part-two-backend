@@ -1,0 +1,230 @@
+
+/* NIKHIL MOHITE */
+/* 104549772 */
+
+
+h1 {
+  font: bold 36px/1.5 Roboto, sans-serif;
+  text-align: center;
+}
+
+/* Styles for the body element */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styles for the element with class "description" */
+.description {
+  margin-left: 19%;
+  margin-right: 19%;
+}
+
+/* Styles for the horizontal line */
+hr {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar{
+    width: 90%;
+    max-height: 80px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightblue;
+    border-radius: 8px; /* Added for a more modern, rounded look */
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2); /* Added shadow for a 3D feel */
+    transition: all 0.3s ease; /* Added transition for a smooth effect on changes */
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600; /* Added for bold, modern typography */
+    transition: color 0.3s ease; /* Added transition for a smooth hover effect */
+}
+
+.navbar ul a:hover{
+    color: #007BFF; /* Added a hover effect */
+}
+
+
+
+footer {
+  background-color: lightblue;
+  position: absolute;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.image{
+  display: block;
+  margin: auto;
+  width: 40%;
+  height: auto;
+  border: 4px solid lightblue;
+}
+
+.imagetable{
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: auto;
+    border: 4px solid lightblue;
+  }
+
+
+.image2{
+  width:32%;
+  height: auto;
+  border: 3px solid lightblue;
+
+}
+
+.image3{
+  margin-left: 5%;
+  align-items: center;
+  width:40%;
+  height: auto;
+  border: 4px solid lightblue;
+}
+
+
+.image21{ 
+  width: 220px !important;
+  margin-left: 16%;
+  height: auto !important;
+  margin: 0, auto;
+  border: 4px solid lightblue;
+  align-items: center !important;
+}
+.L{ /* Clss including all Links */
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom:6px;
+}
+a{ /*link colours*/
+  color: #267f4c;
+}
+
+
+/*ANIMATIONS*/
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #267f4c;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.navbar li a { 
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover { 
+    color: rgba(0,151,141,1);
+}
+
+
+/*text hovering*/
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+*:hover {
+  transform: translate(0, -2px);
+}
+
+
+
+/*RESPONSIVE DESIGN */
+
+
+@media screen and (max-width: 1063px) {
+  .image2, .image3, .imagetable{ /*ensures images larger when display is small and also are aligned vertically*/
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+
+  }
+  .image{
+    display: block;
+    width:90%;
+
+  }
+  .image21{
+    display: block;
+    width: 50% !important;
+    margin: 0 auto !important;
+
+  }
+
+    .description{ /*removes the margins allowing text and image to spread across a mobile device screen*/
+      margin-left: 2%;
+      margin-right: 2%;
+
+     
+  }
+
+}
+  @media screen and (max-width: 800px) {
+    .navbar ul li{ /*responsive navbar*/
+      display: block !important;
+      text-align: center !important;
+      padding: 2%
+  
+    }
+  
+    .navbar ul li a{
+      margin-right: 30%;
+      font-size: 10;
+  
+    }
+  
+    .links{
+      font-size: 12.5px;
+      margin-right: 11%;
+    }
+  
+  }
+
+
+
+
+
+
+
+  
+
+  

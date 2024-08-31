@@ -1,0 +1,335 @@
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar{
+    width: 90%;
+    max-height: 80px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightblue;
+    border-radius: 8px; /* Added for a more modern, rounded look */
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2); /* Added shadow for a 3D feel */
+    transition: all 0.3s ease; /* Added transition for a smooth effect on changes */
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600; /* Added for bold, modern typography */
+    transition: color 0.3s ease; /* Added transition for a smooth hover effect */
+}
+
+.navbar ul a:hover{
+    color: #007BFF; /* Added a hover effect */
+}
+
+/* padding for footer */
+body{
+    font-family: 'Roboto';
+}
+
+h1 {
+    font: bold 36px/1.5 'Roboto', sans-serif;
+    text-align: center;
+  }
+.subheading{
+    padding: 30px;
+}
+.footer{
+    padding-left: 20px;
+}
+dl {
+    padding: 2em;
+    font-size: 20px;
+    clear: left;
+    float: left; 
+    width: 40%; 
+  }
+  dt {
+    clear: left;
+	float: left;
+    width: 40%;
+	text-align: right;
+    font-weight: bold;
+    color: green;
+  }
+
+
+  dd {
+    width: 50%;
+	margin-left: 50%;
+  }
+
+/* Table Styles */
+table, th, td{
+    border: solid 1px; 
+}
+th{
+    height: 50px; 
+    background-color: #89CFF0;
+}
+td{
+    background-color: #89CFF0;
+
+}
+table{
+    width:1000px; 
+    margin: 0 auto; 
+    text-align: center;
+    font-size: 16px;
+}
+/* sets the table header and table description to bold */
+td:first-child,
+th:first-child{
+    font-weight: bold;
+}
+/* Member's Image and Description */
+.container-1, .container-2{
+    width: 100%; 
+    display: flex;
+    box-sizing: border-box;
+    margin-top: -25px;
+}
+.members{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.members img{
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 2px solid #ccc; 
+}
+.members p{
+    max-width: 90%; 
+    text-align: left;
+}
+.container-2 p{
+    max-width: 85%;
+}
+
+.group_photo img{
+    text-align: right;
+    float: right;
+    width: 50%;
+    border: 2px solid #ccc; 
+    box-sizing: border-box;
+}
+
+figcaption{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p{
+    font-size: 16px;
+}
+
+.meet_members{
+    clear: both; 
+    text-align: center;
+    padding: 50px;
+}
+
+/*added the footer css*/
+footer { 
+  background-color: lightblue;
+  position: absolute;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.tabel-info{
+  width: 100%;
+}
+
+
+
+/*ANIMATIONS*/
+
+/*navigation bar*/
+.navbar li a { 
+  transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover { 
+  color: rgba(0,151,141,1);
+}
+
+
+.navbar ul li::after{
+  content:'';
+  height: 3px;
+  width: 0;
+  background: #267f4c;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+
+}
+
+.navbar ul li:hover::after{
+  width: 100%;
+}
+
+/*Group image Hovering*/
+.groupimage {
+  float: left;
+  margin: 20px;
+  animation: float 1500ms infinite alternate-reverse;
+  transition: all 300ms;
+}
+.groupimage:hover {
+  transform: scale(1.1);
+}
+
+/*Selfie image Hovering*/
+.selfies {
+  float: left;
+  margin: 20px;
+  animation: float 1500ms infinite alternate-reverse;
+  transition: all 300ms;
+}
+.selfies:hover {
+  transform: scale(1.1);
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(20px);
+  }
+}
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+* :hover {
+  transform: translate(0, -5px);
+}
+
+
+/*exclude table from animation effects*/
+.table-container * {
+  transition: none !important;
+}
+
+.table-container *:hover {
+  transform: none !important;
+}
+
+.group_photo *{
+  transition: none !important;
+}
+.group_photo *:hover {
+  transition: none !important;
+}
+  
+
+
+
+/* RESPONSIVE DESIGN */
+
+/*ensuring the table shrinks to fit the screen on small displays*/
+@media screen and (max-width: 1250px){
+  .table-info{
+  width: 80%;
+  font-size: 0.8em !important;
+  }
+  .Introduction{
+    display: block !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 20%;
+    margin-top: 0;
+  }
+  .group_photo {
+    text-align: center; 
+  }
+  
+  .groupimage {
+    width: 95%; 
+    margin-right: 25%;
+  }
+
+  
+}
+
+@media screen and (max-width: 768px){
+  .container-1{
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-between;
+      flex-direction: column !important;
+      text-align: center;
+      
+  }
+    
+  .container-2{
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: space-between;
+      flex-direction: column !important;
+      text-align: center;
+  }
+    
+  .container-1 p{
+      text-align: center;
+  }
+
+   .container-2 p{
+      text-align: center;
+  }
+
+
+}
+
+@media screen and (max-width: 700px){
+  .navbar li{
+    display: block !important;
+    font-size: 12.5px;
+    padding: 2px;
+  }
+  .navbar ul li a{
+    text-align: center !important;
+    margin-right: 10% !important;
+  }
+
+}
+
+
+
+
+
+
